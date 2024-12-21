@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PythonCSharp": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
