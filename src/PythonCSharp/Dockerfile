@@ -1,5 +1,5 @@
 # Base com runtime do .NET e Python
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS base
 WORKDIR /app
 
 # Instalar Python no container
@@ -34,6 +34,8 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 COPY ./command.py /app/command.py
 COPY ./file.txt /app/file.txt
+COPY ./foto/teste.jpg /app/foto/teste.jpg
+
 
 # Configurar o ponto de entrada
 ENTRYPOINT ["dotnet", "PythonCSharp.dll"]
